@@ -12,7 +12,10 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      /* --- CHANGE IS HERE --- */
+      height: 100vh; /* Fallback for older browsers */
+      height: 100dvh; /* Fills the screen correctly on mobile */
+      /* ---------------------- */
       overflow: hidden;
     }
 

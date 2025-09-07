@@ -2,59 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Father's Day Papa Ji!</title>
   <style>
     body {
       margin: 0;
-      background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* Blue gradient */
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* Father's Day blue gradient */
       font-family: 'Segoe UI', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      /* --- CHANGE IS HERE --- */
-      height: 100vh; /* Fallback for older browsers */
-      height: 100dvh; /* Fills the screen correctly on mobile */
-      /* ---------------------- */
+      height: 100vh;
       overflow: hidden;
+      padding: 20px; /* Adds space from the edges */
+      box-sizing: border-box; /* Ensures padding doesn't create scrollbars */
     }
 
     .card {
       background: white;
-      padding: 40px;
+      padding: 30px 20px;
       border-radius: 20px;
       box-shadow: 0 10px 20px rgba(0,0,0,0.15);
       text-align: center;
-      max-width: 460px;
+      width: 100%;
+      max-width: 420px;
       animation: fadeIn 1.2s ease forwards;
     }
 
     h1 {
-      font-size: 2.5rem;
-      color: #0056b3; /* A strong blue color */
+      font-size: 2rem;
+      color: #0056b3; /* Father's Day blue */
+      margin-bottom: 10px;
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin-top: 10px;
-      color: #555;
+      color: #444;
+      line-height: 1.5;
     }
 
     .balloon {
       position: absolute;
       bottom: -100px;
-      font-size: 2rem;
+      font-size: 1.8rem;
       animation: float 6s infinite ease-in-out;
+      pointer-events: none; /* Prevents balloons from being clickable */
     }
 
     @keyframes float {
-      0% { transform: translateY(0) }
-      100% { transform: translateY(-120vh) }
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-120vh); }
     }
+
+
 
     @keyframes fadeIn {
       from { transform: scale(0.9); opacity: 0; }
       to { transform: scale(1); opacity: 1; }
+    }
+
+    /* Extra tweaks for very small screens */
+    @media (max-width: 360px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
